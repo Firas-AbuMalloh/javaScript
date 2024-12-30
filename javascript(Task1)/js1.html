@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div>
+      <h2>task2...:<br /><br />factor number</h2>
+      <input
+        type="number"
+        id="userInput"
+        onchange="oddNum(document.getElementById('userInput').value)"
+      />
+      <input
+        type="button"
+        value="calculate"
+        onclick="oddNum(document.getElementById('userInput').value)"
+      />
+      <h3 id="result"></h3>
+    </div>
+    <div>
+      <h2>task2...:<br /><br />zakat</h2>
+      <input
+        type="number"
+        id="zakatuserInput"
+        onchange="zakat(document.getElementById('zakatuserInput').value)"
+      />
+      <input
+        type="button"
+        value="calculate"
+        onclick="zakat(document.getElementById('zakatuserInput').value)"
+      />
+      <h3 id="zakat"></h3>
+    </div>
+
+    <script>
+      function oddNum(num) {
+        let count = 1;
+        for (let i = 1; i <= num; i++) {
+          count *= i;
+        }
+        document.getElementById("result").innerText = count;
+      }
+
+      /*
+
+let x = 250 ;
+create variable Calculate the value of zakat for x ,If you know the percentage of zakat = 2.5 %; 
+
+*/
+
+      function zakat(num) {
+        document.getElementById("zakat").innerText = num * 0.025 + "JD";
+      }
+    </script>
+  </body>
+</html>
