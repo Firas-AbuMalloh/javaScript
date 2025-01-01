@@ -8,7 +8,7 @@
   </head>
   <body>
     <div>
-      <h2>task2...:<br /><br />factor number</h2>
+      <h2 class="tyty">task2...:<br /><br />factor number</h2>
       <input
         type="number"
         id="userInput"
@@ -43,7 +43,10 @@
           count *= i;
         }
         document.getElementById("result").innerText = count;
+
+        console.log(count);
       }
+      oddNum(5);
 
       /*
 
@@ -52,8 +55,14 @@ create variable Calculate the value of zakat for x ,If you know the percentage o
 
 */
 
+      const pp = document.getElementsByTagName("h3");
+
+      console.log(pp[0]);
+
       function zakat(num) {
-        document.getElementById("zakat").innerText = num * 0.025 + "JD";
+        if (num > 4000)
+          document.getElementById("zakat").innerText = num * 0.025 + "JD";
+        else document.getElementById("zakat").innerText = "Balance is < 4000 ";
       }
     </script>
   </body>

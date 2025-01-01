@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .userInput {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 350px;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="userInput">
+      <textarea id="comments" name="comments" rows="4" cols="50">
+            Enter your comments here
+            </textarea
+      >
+      <div>
+        <select name="font" id="font" onchange="changeFonts()">
+          <option value="SelectFont">** Select Font **</option>
+          <option value="courier">courier</option>
+          <option value="Arial">Arial</option>
+          <option value="sans-serif">sans-serif</option>
+          <option value="Franklin Gothic Medium">Franklin Gothic Medium</option>
+          <option value="Times">Times</option>
+          <option value="Tahoma">Tahoma</option>
+          <option value="Verdana">Verdana</option>
+          <option value="Segoe UI">Segoe UI</option>
+        </select>
+        <select id="size" name="size" onchange="changeSize()">
+          <option value="15px">select font size</option>
+          <option value="15px">15px</option>
+          <option value="25px">25px</option>
+          <option value="30px">30px</option>
+          <option value="45px">45px</option>
+        </select>
+
+        <input
+          type="checkbox"
+          name="fontFont"
+          value="Bold"
+          onclick="font1('Bold')"
+          id="Bold"
+        /><label>Bold</label>
+        <input
+          type="checkbox"
+          name="fontFont"
+          value="Undrline"
+          id="Undrline"
+          onclick="font2('Undrline')"
+        /><label>Undrline</label>
+        <input
+          type="checkbox"
+          name="fontFont"
+          value="Italic"
+          id="Italic"
+          onclick="font3('Italic')"
+        /><label>Italic</label>
+      </div>
+    </div>
+
+    <script>
+      function changeFonts() {
+        let x = document.getElementById("font").value;
+
+        document.getElementById("comments").style.fontFamily = x;
+      }
+
+      function changeSize() {
+        let text = document.getElementById("comments");
+        text.style.fontSize = document.getElementById("size").value;
+      }
+
+      function font1() {
+        let text = document.getElementById("comments");
+        let checkbox_ = document.getElementById("Bold");
+        if (checkbox_.checked) {
+          text.style.fontWeight = "bold";
+        } else text.style.fontWeight = 1;
+      }
+
+      function font2() {
+        let text = document.getElementById("comments");
+        let checkbox_ = document.getElementById("Undrline");
+        if (checkbox_.checked) {
+          text.style.textDecoration = "underline";
+        } else text.style.textDecoration = "none";
+      }
+
+      function font3() {
+        let text = document.getElementById("comments");
+        let checkbox_ = document.getElementById("Italic");
+        if (checkbox_.checked) {
+          text.style.fontStyle = "italic";
+        } else text.style.fontStyle = "normal";
+      }
+    </script>
+  </body>
+</html>

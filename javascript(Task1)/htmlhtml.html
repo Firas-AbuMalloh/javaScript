@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>ID</h2>
+
+    <div id="myId">Hello</div>
+
+    <hr />
+
+    <h2>TagName</h2>
+
+    <div id="myName"></div>
+    <p>para1</p>
+    <p>para2</p>
+
+    <hr />
+
+    <h2>Class</h2>
+
+    <p class="test">This is p1</p>
+    <p class="test">This is p2</p>
+    <p class="test">This is p2</p>
+    <p class="test">This is p2</p>
+    <p class="test">This is p2</p>
+    <p class="test">This is p3</p>
+
+    <hr />
+
+    <h2>Query</h2>
+
+    <div class="testq">query Div</div>
+    <p class="testq">query 1</p>
+    <p class="testq2">query 2</p>
+
+    <p class="testq2">query 2</p>
+    <p class="testq">query 3</p>
+
+    <!-- to explain the diffrent between querySelector and querySelectorAll -->
+
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <button onclick="changeFirstBox()">Change First Box</button>
+    <button onclick="changeAllBoxes()">Change All Boxes</button>
+
+    <script src="main.js"></script>
+
+    <video
+      id="vv"
+      src="/vedio/Untitled design.mp4"
+      style="width: 800px"
+      onclick="fullscreen()"
+      onmouseout="pauseee()"
+      onmouseover="Playyy()"
+      loop
+    ></video>
+
+    <script>
+      function fullscreen() {
+        let x = document.getElementById("vv");
+        x.requestFullscreen();
+      }
+
+      function Playyy(){
+         const p = document.getElementById('vv');
+         p.play();
+      }
+
+      function pauseee(){
+          const s = document.getElementById('vv');
+          s.pause();
+      }
+
+      let x = document.getElementById('myId');
+      x.innerHTML = "firas" ;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div style="display: flex; justify-content: center; align-items: center">
+      <h1
+        onmouseout="textchange2()"
+        onmouseover="textchange()"
+        style="
+          text-align: center;
+          border: 2px black solid;
+          background-color: yellow;
+          width: 500px;
+          height: 70px;
+        "
+      >
+        Can i help you ?
+      </h1>
+    </div>
+
+    <script>
+      function textchange() {
+        let x = (document.querySelector("h1").innerHTML = "Hollo World !");
+      }
+      function textchange2() {
+        let x = (document.querySelector("h1").innerHTML = "Can i help you ?");
+      }
+    </script>
+  </body>
+</html>
