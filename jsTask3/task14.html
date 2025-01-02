@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <script>
+      /*
+14
+Write a function called longerString
+that accept four string as an arguments,
+and return the first longer string
+
+Ex: longerString("air","school","car","github")
+=> school
+
+Ex: longerString("air","schoo","car","github")
+=> github
+
+try all the cases (change the order of the longestString)
+*/
+
+      function longerString(str1, str2, str3, str4) {
+        switch (true) {
+          case str1.length >= str2.length &&
+            str1.length >= str3.length &&
+            str1.length >= str4.length:
+            return str1;
+          case str2.length >= str3.length && str2.length >= str4.length:
+            return str2;
+          case str3.length >= str4.length:
+            return str3;
+          default:
+            return str4;
+        }
+      }
+      console.log(longerString("air", "schoo", "car", "github"));
+      console.log(longerString("air", "school", "car", "github"));
+    </script>
+  </body>
+</html>

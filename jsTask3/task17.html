@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <script>
+      /*
+17
+Write a function called positive
+that accept 1 argument as a number,
+and return the positive version of the number passed
+
+Ex: positive(4)
+=> 4
+Ex: positive(-5)
+=> 5
+
+*/
+
+      function positive(num) {
+        if (num < 0) return (num * -1);
+        else return num;
+      }
+      console.log(positive(4));
+      console.log(positive(-5));
+    </script>
+  </body>
+</html>

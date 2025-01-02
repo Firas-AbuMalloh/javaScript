@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <script>
+      /*
+10
+Write a function called sameLength
+that accepts two strings as arguments,
+and returns true if those strings have the same length, and false otherwise.
+
+**hint: how we can know string length   Ex: : "tree".length   => 4
+
+Ex: sameLength("tree","clue")
+=> true
+
+Ex: sameLength("tree","car")
+=> false
+*/
+
+      function sameLength(str1, str2) {
+        if (str1.length == str2.length) return true;
+        else return false;
+      }
+      console.log(sameLength("tree", "clue"));
+      console.log(sameLength("tree", "car"));
+    </script>
+  </body>
+</html>

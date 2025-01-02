@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <!-- /*
+    1
+    Write a function named tellFortune that:
+    takes 4 arguments: number of children,
+    partner's name, geographic location, job title.
+    outputs your fortune to the screen like so:
+    "You will be a X in Y, and married to Z with N kids."
+    
+    Ex: tellFortune('software engineer', 'Jordan', 'Alice', 3);
+    => "You will be a software engineer in Jordan, and married to Alice with 3 kids."
+    */
+     -->
+
+    <script>
+      function tellFortune(numOfChildren, partner, location, job) {
+        document.write(
+          "You will be a " +
+            job +
+            " in " +
+            location +
+            ", and married to " +
+            partner +
+            " with " +
+            numOfChildren +
+            " kids."
+        );
+      }
+      tellFortune(7,"firas", "jordan", "software");
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <script>
+      /*
+24
+Write a function called resetCounter
+that will reset the previuos function
+and return the number before reset and
+a string say that the counter reset
+
+Ex: counter()
+=> 1
+
+Ex: counter()
+=> 2
+
+Ex: counter()
+=> 3
+
+Ex: resetCounter()
+=> 3 and the counter reset now
+
+Ex: counter()
+=> 1
+
+Ex: counter()
+=> 2
+
+Ex: resetCounter()
+=> 2 and the counter reset now
+
+Ex: counter()
+=> 1
+*/
+
+      sessionStorage.setItem("num", 0);
+      function counter() {
+        Number(
+          sessionStorage.setItem(
+            "num",
+            Number(sessionStorage.getItem("num")) + 1
+          )
+        );
+        return sessionStorage.getItem("num");
+      }
+      console.log(counter());
+      console.log(counter());
+      console.log(counter());
+      console.log(counter());
+      console.log(counter());
+
+      function resetCounter() {
+        console.log(
+          Number(sessionStorage.getItem("num")) + " and the counter reset now"
+        );
+        sessionStorage.removeItem("num");
+        sessionStorage.clear("num");
+      }
+
+      resetCounter();
+      console.log(counter());
+      console.log(counter());
+      console.log(counter());
+      console.log(counter());
+      console.log(counter());
+      console.log(counter());
+      resetCounter();
+    </script>
+  </body>
+</html>

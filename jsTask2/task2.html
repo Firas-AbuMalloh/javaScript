@@ -101,6 +101,55 @@
           text.style.fontStyle = "italic";
         } else text.style.fontStyle = "normal";
       }
+
+      function fun(num) {
+        let count = 0;
+        for (let i = num; i <= num + 10; i++) {
+          count += i;
+        }
+        console.log(count);
+      }
+
+      fun(1);
+
+      function fun222(num1, num2) {
+        let countEven = 0;
+        let countOdd = 0;
+        for (let i = num1; i <= num2; i++) {
+          if (i % 2 == 0) {
+            console.log(i + " is even");
+            countEven += i;
+          } else {
+            console.log(i + " is odd");
+            countOdd += i;
+          }
+        }
+        console.log("the count of odd num is : " + countOdd);
+        console.log("the count of Even num is : " + countEven);
+      }
+
+      fun222(1, 100);
+
+      function x(n1, n2, n3) {
+        
+        if (n1 >= n2 && n1 >= n3)
+         max = n1;
+        else if (n2 >= n3)
+         max = n2;
+        else
+         max = n3;
+
+        return max;
+      }
+
+      console.log(x(-90, -100, -555));
+
+
+
+
+
+
+      console.log(sessionStorage.getItem('Name'));
     </script>
   </body>
 </html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <script>
+      /*
+13
+Write a function called shorterString
+that accept five string as an arguments,
+and return the first shorter string
+
+Ex: shorterString("air","school","car","by","github")
+=> by
+
+Ex: shorterString("air","tr","car","by","github")
+=> tr
+
+Ex: shorterString("by","tr","car","air","github")
+=> by
+
+Ex: shorterString("air","by","car","school","github")
+=> by
+
+Ex: shorterString("air","tr","by","car","github")
+=> by
+
+Ex: shorterString("air","tr","car","github","by")
+=> by
+
+*/
+
+      function shorterString(num1, num2, num3, num4, num5) {
+        switch (true) {
+          case num1.length <= num2.length &&
+            num1.length <= num3.length &&
+            num1.length <= num4.length &&
+            num1.length <= num5.length:
+            return num1;
+          case num2.length <= num3.length &&
+            num2.length <= num4.length &&
+            num2.length <= num5.length:
+            return num2;
+          case num3.length <= num4.length && num3.length <= num5.length:
+            return num3;
+          case num4.length <= num5.length:
+            return num4;
+          default:
+            return num5;
+        }
+      }
+
+      console.log(shorterString("air", "school", "car", "by", "github"));
+      console.log(shorterString("air", "tr", "car", "by", "github"));
+      console.log(shorterString("by", "tr", "car", "air", "github"));
+      console.log(shorterString("air", "by", "car", "school", "github"));
+      console.log(shorterString("air", "tr", "by", "car", "github"));
+      console.log(shorterString("air", "tr", "car", "github", "by"));
+    </script>
+  </body>
+</html>

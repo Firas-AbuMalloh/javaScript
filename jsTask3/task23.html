@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <script>
+      /*
+      23
+      Write a function called counter
+      that will returns a number bigger
+      than the one that returnd before
+      and start from 0
+
+      Ex: counter()
+      => 1
+
+      Ex: counter()
+      => 2
+
+      Ex: counter()
+      => 3
+
+      */
+      sessionStorage.setItem("num", 0);
+      function counter() {
+        Number(
+          sessionStorage.setItem(
+            "num",
+            Number(sessionStorage.getItem("num")) + 1
+          )
+        );
+        return sessionStorage.getItem("num");
+      }
+      console.log(counter());
+      console.log(counter());
+      console.log(counter());
+      console.log(counter());
+      console.log(counter());
+    </script>
+  </body>
+</html>

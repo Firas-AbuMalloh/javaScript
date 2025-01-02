@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+ 
+</head>
+<body>
+    
+
+
+    <script>
+
+
+/*
+3
+Write a function named calculateSupply that:
+takes 2 arguments: age, amount per day.
+calculates the amount consumed for rest of the life (based on a constant max age 100).
+outputs the result to the screen like so:
+"You will need NN to last you until the ripe old age of X"
+
+Ex: calculateSupply(30, 3);
+=> 'You will need 76650 cups of tea to last you until the ripe old age of 100;
+*/
+
+
+
+        function tea(age){
+            let age1 = 100-age;
+            let day = age1*365;
+            let cups = day*3;
+            console.log("You will need "+ cups +" cups of tea to last you until the ripe old age of 100");
+        }
+
+tea(30)
+
+    </script>
+</body>
+</html>
