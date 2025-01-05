@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <script>
+      // Create a function findMax that finds the maximum number in an array.
+      // Examples:
+      // Input: [3, 7, 1, 9, 2]
+      // Output: 9
+
+      // Input: [-5, -1, -10]
+      // Output: -1
+
+      function max(arr) {
+        let x = arr[0];
+
+        for (let i = 0; i <= arr.length - 1; i++) if (arr[i] < x) x = arr[i];
+        return x;
+      }
+      const arr = [1, 2, 3, 4, 5, -1];
+
+      console.log(max(arr));
+    </script>
+  </body>
+</html>

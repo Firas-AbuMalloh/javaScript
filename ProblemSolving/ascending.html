@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <script>
+      // Create a function isSorted that checks if an array is sorted in ascending order.
+      // Examples:
+      // Input: [1, 2, 5, 40]
+      // Output: true
+
+      // Input: [1, 3, 2]
+      // Output: false
+
+      function ascending(arr) {
+        let count1 = 1;
+        let count2 = arr[count1];
+        for (let i = 0; i < arr.length - 1; i++) {
+          if (arr[i] <= count2) {
+            count1++;
+            count2 = arr[count1];
+          } else return false;
+        }
+        return true;
+      }
+
+      console.log(ascending([1, 2, 40, 50]));
+      console.log(ascending([1, 2, 3]));
+    </script>
+  </body>
+</html>

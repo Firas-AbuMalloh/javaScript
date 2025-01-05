@@ -25,6 +25,8 @@
       => 3
 
       */
+
+
       sessionStorage.setItem("num", 0);
       function counter() {
         Number(
@@ -33,7 +35,7 @@
             Number(sessionStorage.getItem("num")) + 1
           )
         );
-        return sessionStorage.getItem("num");
+        return sessionStorage.num;
       }
       console.log(counter());
       console.log(counter());

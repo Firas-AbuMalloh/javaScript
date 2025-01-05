@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      label {
+        display: block;
+        margin-top: 1em;
+      }
+
+      input:valid {
+        background-color: palegreen;
+      }
+
+      input:invalid {
+        background-color: lightpink;
+      }
+
+
+*:disabled {
+  background-color: dimgrey;
+  color: linen;
+  opacity: 1;
+}
+
+    </style>
+  </head>
+  <body>
+    <input type="date" max="2019-12-25" step="1" />
+
+    <p>max Date in this filed 2019-12-25 ;</p>
+
+    <br />
+    <br />
+    <br />
+
+    <input type="month" max="2019-12" step="12" />
+
+    <p>max Date in this filed 2019-12 ;</p>
+    <br />
+    <br />
+    <br />
+
+    <input type="week" max="2019-W23" step="" />
+    <p>max Date in this filed week 23 ;</p>
+
+    <br />
+    <br />
+    <br />
+
+    <input type="number" min="0" step="5" max="100" />
+
+    <br />
+    <br />
+    <br />
+
+    <input type="range" min="60" step="5" max="100" />
+
+    <br />
+    <br />
+    <br />
+
+    <label for="username">Username: (3-16 characters)</label>
+    <input
+      id="username"
+      name="username"
+      type="text"
+      value="Sasha"
+      pattern="\w{3,16}"
+      required
+    />
+
+    <label for="pin">PIN: (4 digits)</label>
+    <input id="pin" name="pin" type="password" pattern="\d{4,4}" required />
+
+
+
+    <form>
+        <label for="name">Name:</label>
+        <input id="name" name="name" type="text" />
+      
+        <label for="emp">Employed:</label>
+        <select id="emp" name="emp" disabled>
+          <option>No</option>
+          <option>Yes</option>
+        </select>
+
+        <label for="emp">Employed:</label>
+        <select id="emp" name="emp" disabled>
+          <option>No</option>
+          <option>Yes</option>
+        </select>
+      
+        <label for="empDate">Employment Date:</label>
+        <input id="empDate" name="empDate" type="date" disabled />
+      
+        <label for="resume">Resume:</label>
+        <input id="resume" name="resume" type="file" />
+      </form>
+      
+      
+
+    <script></script>
+  </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css.css" />
+  </head>
+  <body style="display: flex; justify-content: center">
+    <form id="form" onsubmit="saveshow(event)">
+      <label for="name">Name :</label>
+      <input
+        id="name"
+        type="text"
+        maxlength="50"
+        placeholder="firas abumalloh"
+      /><br /><br />
+      <label for="age">age :</label>
+      <input id="age" type="number" max="70" placeholder="25" /><br /><br />
+      <label for="gender">gender :</label>
+      <input
+        id="gender"
+        type="text"
+        maxlength="10"
+        placeholder="Male"
+      /><br /><br />
+      <label for="birth">Birth Date :</label>
+      <input id="birth" type="date" /><br /><br />
+
+      <label for="image">Upload your image</label>
+      <input id="fileImage" type="file" />
+      <br />
+      <hr />
+      <br />
+      <label for="discription">discription :</label>
+      <input
+        id="discription"
+        type="text"
+        maxlength="150"
+        placeholder="discription"
+      /><br /><br />
+      <label for="university">major & university :</label>
+      <input
+        id="university"
+        type="number"
+        max="70"
+        placeholder="JUST"
+      /><br /><br />
+
+      <label for="language">Programming Language :</label>
+
+      <input name="Programming" type="checkbox" id="HTML" />
+      <label for="language">HTML </label>
+
+      <input name="Programming" type="checkbox" id="css" />
+      <label for="language">CSS</label>
+
+      <input name="Programming" type="checkbox" id="javascript" />
+      <label for="language">java Script</label>
+      <br />
+      <hr />
+      <br />
+
+      <label for="sibling">Sibling Number :</label>
+      <input name="sibling" id="sibling" type="text" /><br /><br />
+
+      <label for="siblingdis">discription of Sibling :</label>
+      <input name="siblingdis" id="siblingdis" type="text" /><br /><br />
+
+      <input id="sub" type="submit" width="50px" />
+    </form>
+
+    <div id="card" class="card"></div>
+
+    <script>
+      function saveshow(event) {
+        event.preventDefault();
+
+        let card = document.getElementById("card");
+        card.style.display = "block";
+
+        card.innerHTML +=
+          "<p>your name is :" +
+          document.getElementById("name").Value +
+          "</p><br>";
+        card.innerHTML +=
+          "<p>your age is :" +
+          document.getElementById("age").Value +
+          "</p><br>";
+        card.innerHTML +=
+          "<p>your gender is :" +
+          document.getElementById("gender").Value +
+          "</p><br>";
+
+        card.innerHTML +=
+          "<p>your birth is :" +
+          document.getElementById("birth").Value +
+          "</p><br>";
+        card.innerHTML +=
+          "<p>your fileImage is :" +
+          document.getElementById("fileImage").Value +
+          "</p><br>";
+
+        card.innerHTML +=
+          "<p>your discription is :" +
+          document.getElementById("discription").Value +
+          "</p><br>";
+
+        card.innerHTML +=
+          "<p>your name is :" +
+          document.getElementById("name").Value +
+          "</p><br>";
+        card.innerHTML +=
+          "<p>your name is :" +
+          document.getElementById("name").Value +
+          "</p><br>";
+      }
+    </script>
+  </body>
+</html>
