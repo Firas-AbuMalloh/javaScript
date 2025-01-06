@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        background-color: antiquewhite;
+      "
+    >
+      <select id="flag" onchange="addFlag()">
+        <option value="0">Select Country</option>
+        <option value="Jordan">Jordan</option>
+        <option value="Palastine">Palastine</option>
+        <option value="Iraq">Iraq</option>
+      </select>
+    </div>
+    <div
+      id="flagjordan"
+      style="
+        display: none;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        background-color: rgb(248, 248, 248);
+      "
+    >
+      <img src="img/R (2).jpg" width="400px" />
+    </div>
+    <div
+      id="flagPalastine"
+      style="
+        display: none;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        background-color: rgb(248, 248, 248);
+      "
+    >
+      <img src="img/OIP.jpg" width="400px" />
+    </div>
+    <div
+      id="flagIraq"
+      style="
+        display: none;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        background-color: rgb(248, 248, 248);
+      "
+    >
+      <img src="img/R.jpg" width="400px" />
+    </div>
+
+    <script>
+      function addFlag() {
+        let value1 = document.getElementById("flag");
+
+        if (value1.value == "0") {
+          document.getElementById("flagjordan").style.display = "none";
+          document.getElementById("flagPalastine").style.display = "none";
+          document.getElementById("flagIraq").style.display = "none";
+        } else if (value1.value == "Jordan") {
+          document.getElementById("flagjordan").style.display = "flex";
+          document.getElementById("flagPalastine").style.display = "none";
+          document.getElementById("flagIraq").style.display = "none";
+        } else if (value1.value == "Palastine") {
+          document.getElementById("flagjordan").style.display = "none";
+          document.getElementById("flagPalastine").style.display = "flex";
+          document.getElementById("flagIraq").style.display = "none";
+        } else {
+          document.getElementById("flagjordan").style.display = "none";
+          document.getElementById("flagPalastine").style.display = "none";
+          document.getElementById("flagIraq").style.display = "flex";
+        }
+      }
+    </script>
+  </body>
+</html>
