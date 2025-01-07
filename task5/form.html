@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel='stylesheet' type='text/css' media='screen' href='css.css'>
+
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="fName">Enter FName :</label><br />
+      <input id="fName" type="text" onKeyUp="checkFName()" />
+      <label for="fName" id="erorrFirstName"></label><br /><br />
+
+      <label for="lName">Enter LName :</label><br />
+      <input id="lName" type="text" onKeyUp="checkLName()" />
+      <label for="lName" id="erorrLastName"></label><br /><br />
+
+      <label for="bDate">Enter BDate :</label><br />
+      <input id="bDate" type="text" onkeyup="checkDate()" /><label
+        for="bDate"
+        id="erorrBirthDate"
+      ></label
+      ><br /><br />
+
+      <label for="Email">Enter an Email :</label><br />
+      <input id="Email" type="text" onkeyup="checkEmail()" /><label
+        for="Email"
+        id="erorrEmail"
+      ></label
+      ><br /><br />
+
+      <label for="ConfirmEmail">Confirm Email :</label><br />
+      <input
+        id="ConfirmEmail"
+        type="text"
+        onkeyup="checkConfirmEmail()"
+      /><label for="ConfirmEmail" id="erorrConfirmEmail"></label><br /><br />
+
+      <label for="Password">Enter Password :</label><br />
+      <input id="Password" type="text" onkeyup="checkpass()" />
+      <div id="errorDiv">
+        <label for="Password" id="erorrPassword"></label>
+      </div>
+
+      <br /><br />
+
+      <label for="ConfirmPassword">Confirm Password :</label><br />
+      <input id="ConfirmPassword" type="text" onkeyup="confirmPass()" /><label
+        for="ConfirmPassword"
+        id="erorrConfirmPassword"
+      ></label
+      ><br /><br />
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
