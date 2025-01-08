@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+<body>
+    
+
+    <script>
+
+
+function primeNum(num){
+    for(let i =1; i<=num; i++){
+         if( num == 1)return false;
+         else if(i==num || i==1) continue
+        else if(num % i == 0)return false;
+    }   
+     return true
+}
+
+    console.log(primeNum(14));  //not prime 14
+    console.log(primeNum(15));  //not prime 15
+    console.log(primeNum(3));
+    console.log(primeNum(5));
+    console.log(primeNum(7));
+    console.log(primeNum(11));
+    console.log(primeNum(13));
+    console.log(primeNum(10));   //not prime 10
+    console.log(primeNum(8));   //not prime 8
+    console.log(primeNum(2));  
+    console.log(primeNum(9));  //not prime 9
+    console.log(primeNum(1000003));
+    console.log(primeNum(100000007));
+    console.log(primeNum(1));   //not prime 1
+
+</script>
+</body>
+</html>

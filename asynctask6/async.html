@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css.css" />
+  </head>
+  <body>
+    <button id="loadBtn" onclick="getJsonData()">Display Data</button>
+    <button id="loadApiBtn" onclick="getApiData()">Display Api Data</button>
+
+    <div id="container" class="container"></div>
+    <div id="container2" class="container"></div>
+
+    <script>
+      function getJsonData() {
+        fetch("json.json")
+          .then((response) => response.json())
+          .then((data) => {
+            for (const user of data) {
+              const card = document.createElement("div");
+              card.className = "card";
+              card.innerHTML = ` <h2>By using jsonFile</h2>
+        <h2>${user.Emp}</h2>
+        <p><b>Age: </b> ${user.Age}</p>
+        <p><b>Email: </b> ${user.Email}</p>
+        <p><b>Profession: </b> ${user.Profession}</p>`;
+              container2.appendChild(card);
+            }
+          });
+      }
+
+      async function getApiData() {
+        const response = await fetch(
+          "https://api.npoint.io/870428cdf1f938412db7"
+        );
+        const data = await response.json();
+
+        const container = document.getElementById("container");
+
+        for (const user of data) {
+          const card = document.createElement("div");
+          card.className = "card";
+          card.innerHTML = ` <h2>By using Api</h2>
+        <h2>${user.Emp}</h2>
+        <p><b>Age: </b> ${user.Age}</p>
+        <p><b>Email: </b> ${user.Email}</p>
+        <p><b>Profession: </b> ${user.Profession}</p>`;
+          container.appendChild(card);
+        }
+      }
+
+      //     function dataRead(){
+
+      //     const xhr = new XMLHttpRequest();
+      //     xhr.open('Get','json.json');
+
+      //      xhr.onload = function (){
+
+      //         if(xhr.status === 200){
+      //              console.log("xdcfgvbhnjm");
+
+      //             const data = json.parse(xhr.responseText);
+      //             console.log(data);
+
+      //         }
+      //     }
+      // }
+
+      //     const xhr2 = new XMLHttpRequest();
+      //     xhr2.open('Get','json.json',true);
+
+      //     function dataread(){
+      //         if(xhr2.status === 200){
+      //             const data = json.parse(xhr2.responseText);
+      //             console.log(data);
+      //             console.log('firas')
+      //         }
+      //     }
+    </script>
+  </body>
+</html>
